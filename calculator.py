@@ -4,10 +4,11 @@ while True:
     print("- : Subtraction")
     print("* : Multiplication")
     print("/ : Division")
+    print("% : Modulus (Remainder)")
     print("q : Quit")
 
-    action = input("Enter your choice (+, -, *, /, q):").strip()
-    if action not in ["+", "-", "*", "/", "q"]:
+    action = input("Enter your choice (+, -, *, /, %, q):").strip()
+    if action not in ["+", "-", "*", "/", "%", "q"]:
         print("Invalid Action!!!")
         continue
         
@@ -17,7 +18,7 @@ while True:
     
     try:
         first = float(input("Enter first number:"))
-        second = float(input("Enter second number"))
+        second = float(input("Enter second number:"))
     except ValueError:
         print("Enter a valid number!!!")
         continue
@@ -36,4 +37,10 @@ while True:
             print(first / second)
         else:
 
+            print("Error: Cannot divide by zero")
+
+    elif action == "%":
+        if second != 0:
+            print(first % second)
+        else:
             print("Error: Cannot divide by zero")
