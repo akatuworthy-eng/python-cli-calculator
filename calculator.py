@@ -1,17 +1,17 @@
 while True:
     print("=== CLI CALCULATOR ===")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+    print("+ : Addition")
+    print("- : Subtraction")
+    print("* : Multiplication")
+    print("/ : Division")
+    print("q : Quit")
 
-    action = input("Enter your choice (1-5):")
-    if action not in ["1", "2", "3", "4", "5"]:
+    action = input("Enter your choice (+, -, *, /, q):").strip()
+    if action not in ["+", "-", "*", "/", "q"]:
         print("Invalid Action!!!")
         continue
         
-    if action == "5":
+    if action == "q":
         print("Goodbye!!!")
         break
     
@@ -22,16 +22,16 @@ while True:
         print("Enter a valid number!!!")
         continue
 
-    if action == "1":
+    if action == "+":
         print(first + second)
 
-    elif action == "2":
+    elif action == "-":
         print(first - second)
 
-    elif action == "3":
+    elif action == "*":
         print(first * second)
 
-    elif action == "4":
+    elif action == "/":
         if second != 0:
             print(first / second)
         else:
